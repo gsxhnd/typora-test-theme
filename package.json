@@ -1,0 +1,15 @@
+{
+  "name": "typora-test-theme",
+  "version": "1.0.0",
+  "repository": "git@github.com:gsxhnd/typora-test-theme.git",
+  "author": "伍轻鸣 <gsxhnd@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:light & yarn build:dart",
+    "build:light": "lessc test-light.less build/test-light.css",
+    "build:dart": "lessc test-dark.less build/test-dark.css"
+  },
+  "devDependencies": {
+    "less": "^4.1.3"
+  }
+}
