@@ -23,4 +23,4 @@ jobs:
           prerelease: false
       - name: Archive Release
         id: archive_release
-        run: cp -r font build/
+        run: cp -r font dist/

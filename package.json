@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn build:light & yarn build:dart",
-    "build:light": "lessc test-light.less build/test-light.css",
-    "build:dart": "lessc test-dark.less build/test-dark.css"
+    "build:light": "lessc test-light.less dist/test-light.css",
+    "build:dart": "lessc test-dark.less dist/test-dark.css"
   },
   "devDependencies": {
     "less": "^4.1.3"
