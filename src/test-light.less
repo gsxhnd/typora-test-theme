@@ -82,16 +82,11 @@ body {
   padding-bottom: 100px;
   position: static;
   width: 100%;
-  ul:first-child,
+  > ul:first-child,
   > ol:first-child {
     margin-top: 30px;
   }
 }
-
-// #write > ul:first-child,
-// #write > ol:first-child {
-//   margin-top: 30px;
-// }
 
 a {
   color: var(--primary-color);
@@ -125,15 +120,9 @@ h6 {
   position: relative;
   color: var(--heading-text-color);
   cursor: text;
-}
-
-h1:hover a.anchor,
-h2:hover a.anchor,
-h3:hover a.anchor,
-h4:hover a.anchor,
-h5:hover a.anchor,
-h6:hover a.anchor {
-  text-decoration: none;
+  :hover a.anchor {
+    text-decoration: none;
+  }
 }
 
 h1 tt,
@@ -358,39 +347,34 @@ table {
   padding: 0;
   margin: 1.5rem 0;
   word-break: initial;
-}
-
-table tr {
-  border-top: 1px solid var(--borders);
-  border-bottom: 1px solid var(--borders);
-  margin: 0;
-  padding: 0;
-}
-
-table tr.md-end-block {
-  border-top: none;
-}
-
-table tbody tr:last-child {
-  border-bottom: none;
-}
-
-table tr th {
-  font-weight: bold;
-  border: none;
-  border-bottom: solid 2px var(--borders);
-  margin: 0;
-  padding: 10px 16px;
-  transition-duration: 0.3s;
-  transition-property: background-color;
-}
-
-table tr td {
-  border: none;
-  margin: 0;
-  padding: 10px 16px;
-  transition-duration: 0.3s;
-  transition-property: background-color;
+  tr {
+    border-top: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+    margin: 0;
+    padding: 0;
+    &.md-end-block {
+      border-top: none;
+    }
+    th {
+      font-weight: bold;
+      border: none;
+      border-bottom: solid 2px var(--borders);
+      margin: 0;
+      padding: 10px 16px;
+      transition-duration: 0.3s;
+      transition-property: background-color;
+    }
+    td {
+      border: none;
+      margin: 0;
+      padding: 10px 16px;
+      transition-duration: 0.3s;
+      transition-property: background-color;
+    }
+  }
+  tbody tr:last-child {
+    border-bottom: none;
+  }
 }
 
 #write table tr td:hover,
@@ -983,10 +967,9 @@ footer.ty-footer {
   opacity: 1 !important;
   color: var(--light-text-color);
   transition: 0.3s;
-}
-
-.footer-item:hover {
-  color: var(--light-text-color-darker) !important;
+  &:hover {
+    color: var(--light-text-color-darker) !important;
+  }
 }
 
 #outline-btn:hover {
