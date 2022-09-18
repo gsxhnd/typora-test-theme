@@ -1,62 +1,8 @@
 @import "fonts.less";
+@import "root.less";
+@import "write.less";
 
 /*by 16soundsofsilence, yes this code is an absolute mess*/
-
-:root {
-  --bg-color: white;
-  --side-bar-bg-color: #f5f7f9;
-  --control-text-color: #3b454e;
-  --primary-color: #15ac8e;
-  --primary-btn-border-color: #15ac8e;
-  --active-file-bg-color: #e6ecf1;
-  --active-file-text-color: inherit;
-  --active-file-border-color: #15ac8e;
-  --item-hover-text-color: #242a31;
-  --item-hover-bg-color: #f5f7f9;
-  --window-border: 1px solid #e6ecf1;
-  --select-text-font-color: white;
-  --select-text-bg-color: #11977d;
-
-  --md-char-color: #9daab6;
-  --heading-char-color: #9daab6;
-  --meta-content-color: #15ac8e;
-
-  --borders: #e6ecf1;
-  --table-border-color: #e6ecf1;
-  --boxes: #f5f7f9;
-  --boxes-darker: #d8e0e7;
-  --boxes-darker2: #bac2c9;
-  --boxes-darkest: #9daab6;
-  --drag-placeholder-color: #d8e0e7;
-
-  --text-color: #3b454e;
-  --heading-text-color: #242a31;
-  --light-text-color: #9daab6;
-  --light-text-color-darker: #74818d;
-  --codeboxes: #183055;
-  --codeboxes-lighter: #1c375f;
-  --rawblock-edit-panel-bd: transparent;
-
-  --primary-color-darkest: #083d33;
-  --primary-color-darker2: #0d5748;
-  --primary-color-darker: #11977d;
-  --focus-ring-color: #15ac8e;
-
-  --danger-color: rgb(255, 70, 66);
-
-  --node-fill: #ececff;
-  --node-border: #ccccff;
-  --cluster-fill: #ffffde;
-  --cluster-border: #aaaa33;
-  --note-fill: #fff5ad;
-  --note-border: #aaaa33;
-
-  /*****************************/
-
-  --font-family: "Roboto", sans-serif;
-  --code-font-family: "Source Code Pro";
-  --monospace: "Source Code Pro";
-}
 
 html,
 .form-control,
@@ -66,26 +12,11 @@ html,
 
 body {
   background: var(--bg-color);
-  font-family: var(--font-family);
+  font-family: @font-family;
   font-weight: 400;
   color: #3b454e;
   line-height: 1.6rem;
   height: 100%;
-}
-
-#write {
-  font-size: 0.95rem;
-  max-width: 850px;
-  margin: 0 auto;
-  margin-top: 1rem;
-  padding: 30px;
-  padding-bottom: 100px;
-  position: static;
-  width: 100%;
-  > ul:first-child,
-  > ol:first-child {
-    margin-top: 30px;
-  }
 }
 
 a {
@@ -203,57 +134,6 @@ h6 {
   line-height: 1.5;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-}
-
-#write > h1.md-focus:before {
-  content: "h1";
-  top: 1.15rem;
-  left: -1.75rem;
-}
-
-#write > h2.md-focus:before {
-  content: "h2";
-  top: 0.75rem;
-  left: -1.75rem;
-}
-
-#write > h3.md-focus:before {
-  content: "h3";
-  top: 0.575rem;
-  left: -1.75rem;
-}
-
-#write > h4.md-focus:before {
-  content: "h4";
-  top: 0.4rem;
-  left: -1.75rem;
-}
-
-#write > h5.md-focus:before {
-  content: "h5";
-  top: 0.25rem;
-  left: -1.75rem;
-}
-
-#write > h6.md-focus:before {
-  content: "h6";
-  top: 0.25rem;
-  left: -1.75rem;
-}
-
-#write > h1.md-focus:before,
-#write > h2.md-focus:before,
-#write > h3.md-focus:before,
-#write > h4.md-focus:before,
-#write > h5.md-focus:before,
-#write > h6.md-focus:before {
-  color: var(--light-text-color);
-  border: none;
-  position: absolute;
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0px;
-  line-height: 1;
 }
 
 h1:first-child,
@@ -375,11 +255,6 @@ table {
   tbody tr:last-child {
     border-bottom: none;
   }
-}
-
-#write table tr td:hover,
-#write table tr th:hover {
-  background-color: var(--boxes);
 }
 
 table tr th:first-child,
@@ -797,20 +672,6 @@ input[type="checkbox"]:checked:after {
   }
 }
 
-#write pre.md-meta-block {
-  padding: 1rem;
-  line-height: 1.45;
-  background-color: var(--boxes);
-  border: 0;
-  border-radius: 0.3rem;
-  color: var(--text-color);
-  border-left: solid 4px var(--boxes-darkest);
-}
-
-#write pre.md-meta-block:empty:before {
-  color: var(--light-text-color);
-}
-
 .md-image > .md-meta {
   border-radius: 3px;
   padding: 2px 0px 0px 4px;
@@ -833,20 +694,8 @@ input[type="checkbox"]:checked:after {
   border: none;
 }
 
-#write div.md-toc-tooltip {
-  background-color: var(--boxes);
-  line-height: 1.6rem;
-  padding: 0.3rem 0.75rem;
-  border-top: none;
-  border-radius: 0.3rem;
-}
-
 .md-toc.md-focus {
   margin-top: 4.5rem;
-}
-
-#write div.md-toc-tooltip + .md-toc-content {
-  padding-top: 1rem;
 }
 
 .md-delete-toc {

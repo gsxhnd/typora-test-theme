@@ -1,0 +1,85 @@
+#write {
+  font-size: 0.95rem;
+  max-width: 850px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 30px;
+  padding-bottom: 100px;
+  position: static;
+  width: 100%;
+  > ul:first-child,
+  > ol:first-child {
+    margin-top: 30px;
+  }
+  .md-focus-before() {
+    color: @light-text-color;
+    border: none;
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0px;
+    line-height: 1;
+  }
+  > h1.md-focus:before {
+    content: "h1";
+    top: 1.15rem;
+    left: -1.75rem;
+    .md-focus-before();
+  }
+  > h2.md-focus:before {
+    content: "h2";
+    top: 0.75rem;
+    left: -1.75rem;
+    .md-focus-before();
+  }
+  > h3.md-focus:before {
+    content: "h3";
+    top: 0.575rem;
+    left: -1.75rem;
+    .md-focus-before();
+  }
+  > h4.md-focus:before {
+    content: "h4";
+    top: 0.4rem;
+    left: -1.75rem;
+    .md-focus-before();
+  }
+  > h5.md-focus:before {
+    content: "h5";
+    top: 0.25rem;
+    left: -1.75rem;
+    .md-focus-before();
+  }
+  > h6.md-focus:before {
+    content: "h6";
+    top: 0.25rem;
+    left: -1.75rem;
+    .md-focus-before();
+  }
+  table tr td:hover,
+  table tr th:hover {
+    background-color: var(--boxes);
+  }
+  pre.md-meta-block {
+    padding: 1rem;
+    line-height: 1.45;
+    background-color: var(--boxes);
+    border: 0;
+    border-radius: 0.3rem;
+    color: var(--text-color);
+    border-left: solid 4px var(--boxes-darkest);
+    &:empty:before {
+      color: var(--light-text-color);
+    }
+  }
+  div.md-toc-tooltip {
+    background-color: var(--boxes);
+    line-height: 1.6rem;
+    padding: 0.3rem 0.75rem;
+    border-top: none;
+    border-radius: 0.3rem;
+    + .md-toc-content {
+      padding-top: 1rem;
+    }
+  }
+}

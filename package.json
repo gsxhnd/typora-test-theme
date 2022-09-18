@@ -10,7 +10,8 @@
     "build:light": "lessc --clean-css='--s1 --advanced' src/test-light.less dist/test-light.css",
     "build:dark": "lessc --clean-css='--s1 --advanced' src/test-dark.less dist/test-dark.css",
     "test:light": "lessc src/test-light.less dist/test-light.css",
-    "test:dark": "lessc src/test-dark.less dist/test-dark.css"
+    "test:dark": "lessc src/test-dark.less dist/test-dark.css",
+    "clean": "rm dist/*"
   },
   "devDependencies": {
     "less": "^4.1.3",
