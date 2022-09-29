@@ -5,12 +5,8 @@
   "author": "伍轻鸣 <gsxhnd@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:light & yarn build:dark",
-    "test": "yarn test:light & yarn test:dark",
-    "build:light": "lessc --clean-css='--s1 --advanced' src/test-light.less dist/test-light.css",
-    "build:dark": "lessc --clean-css='--s1 --advanced' src/test-dark.less dist/test-dark.css",
-    "test:light": "lessc src/test-light.less dist/test-light.css",
-    "test:dark": "lessc src/test-dark.less dist/test-dark.css",
+    "build": "lessc --clean-css='--s1 --advanced' src/test.less dist/test.css",
+    "test": "lessc src/test.less dist/test.css",
     "clean": "rm dist/*"
   },
   "devDependencies": {
